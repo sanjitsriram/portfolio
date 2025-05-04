@@ -1,0 +1,17 @@
+
+/* Skills.css */
+.skills {
+    background-color: #eaeaea;
+    padding: 40px;
+  }
+  
+  .skills ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .skills ul li {
+    font-size: 1.2rem;
+    padding: 5px 0;
+  }
+  

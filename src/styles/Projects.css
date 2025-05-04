@@ -1,0 +1,23 @@
+
+/* Projects.css */
+.projects {
+    background-color: #fff;
+  }
+  
+  .project-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .project {
+    width: 45%;
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: #f4f4f4;
+  }
+  
+  .project h3 {
+    font-size: 1.5rem;
+  }
+  
