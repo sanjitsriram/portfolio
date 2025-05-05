@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+:root {
+  --primary-bg: #313443;
+  --secondary-bg: #242834;
+  --text-light: #fff;
+  --text-gray: #b0b0b0;
+  --highlight-yellow: #FDBB2F;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--primary-bg);
+  font-family: 'Poppins', sans-serif;
+}
+
+.hero {
+  color: var(--text-light);
+}
+
+/* Top Section */
+.hero-top {
+  display: flex;
+  position: relative;
+  background-color: var(--primary-bg);
+  padding: 60px 80px 40px 80px;
+}
+
+.hero-left {
+  flex: 1;
+  position: relative;
+  padding-top: 20px;
+  padding-right: 80px;
+}
+
+.hero-logo {
+  font-size: 40px;
+  font-weight: 700;
+  color: var(--highlight-yellow);
+  margin-bottom: 40px;
+}
+
+.hero-name {
+  font-size: 64px;
+  font-weight: 700;
+  line-height: 1.2;
+  margin: 0;
+  position: relative;
+  z-index: 2;
+}
+
+.dot {
+  color: var(--text-light);
+}
+
+.yellow-line {
+  width: 50px;
+  height: 4px;
+  background: var(--highlight-yellow);
+  margin: 20px 0;
+}
+
+.social-icons {
+  display: flex;
+  gap: 16px;
+  font-size: 20px;
+  z-index: 2;
+  position: relative;
+}
+
+.hero-image {
+  position: absolute;
+  left: 200px;
+  bottom: -40px;
+  height: 420px;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.hero-right {
+  flex: 1;
+  padding-left: 60px;
+}
+
+.nav-menu {
+  display: flex;
+  gap: 40px;
+  font-size: 18px;
+  color: #888;
+  margin-bottom: 40px;
+}
+
+.nav-menu .active {
+  color: var(--text-light);
+  font-weight: 500;
+  position: relative;
+}
+
+.nav-menu .active::after {
+  content: '';
+  width: 6px;
+  height: 6px;
+  background: var(--highlight-yellow);
+  border-radius: 50%;
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.intro-heading {
+  font-size: 14px;
+  color: var(--text-gray);
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.intro-title {
+  font-size: 26px;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.intro-desc {
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--text-gray);
+  margin-bottom: 20px;
+}
+
+.my-story {
+  color: var(--highlight-yellow);
+  font-weight: 500;
+  font-size: 16px;
+  text-decoration: none;
+}
+
+/* Bottom Section */
+.hero-bottom {
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--secondary-bg);
+  padding: 40px 80px;
+  margin-top: 0;
+}
+
+.contact-title {
+  font-size: 13px;
+  color: var(--text-gray);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.contact-desc {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.quote-block {
+  font-size: 18px;
+  line-height: 1.6;
+  text-align: right;
+  max-width: 400px;
+}

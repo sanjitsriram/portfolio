@@ -1,27 +1,131 @@
+.contact-section {
+  background-color: #242834;
+  color: #ffffff;
+  padding: 20px 40px;
+  font-family: "Poppins", sans-serif;
+}
 
-/* Contact.css */
-.contact {
-    background-color: #f4f4f4;
-    padding: 20px;
-    text-align: center;
-  }
-  
-  form {
-    max-width: 500px;
-    margin: 0 auto;
-  }
-  
-  form input, form textarea {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-  }
-  
-  button {
-    background-color: #333;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    cursor: pointer;
-  }
-  
+.contact-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 60px;
+}
+
+.contact-left,
+.contact-right {
+  flex: 1;
+  min-width: 300px;
+  margin-bottom: 40px;
+}
+
+.section-label {
+  color: #aaa;
+  font-size: 17px;
+  margin-bottom: 10px;
+}
+
+.contact-heading {
+  font-size: 28px;
+  color: #fff;
+  margin-bottom: 15px;
+}
+
+.contact-description {
+  font-size: 14px;
+  color: #ccc;
+  margin-bottom: 25px;
+  line-height: 1.6;
+}
+
+.contact-email {
+  display: inline-flex;
+  align-items: center;
+  color: #f6aa1c;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.arrow-icon {
+  margin-left: 8px;
+  transition: transform 0.3s ease;
+}
+
+.contact-email:hover .arrow-icon {
+  transform: translateX(5px);
+}
+
+.quote {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+.quote-sub {
+  font-size: 14px;
+  color: #bbb;
+  line-height: 1.6;
+  margin-bottom: 25px;
+}
+
+.stats {
+  display: flex;
+  gap: 40px;
+}
+
+.stat-box h1 {
+  font-size: 36px;
+  color: #f6aa1c;
+  margin-bottom: 5px;
+}
+
+.stat-box span {
+  font-size: 13px;
+  color: #aaa;
+}
+
+.services-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.service-card {
+  background-color: #1c1f26;
+  padding: 30px 20px;
+  width: 220px;
+  text-align: center;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.service-card.highlighted {
+  background-color: #f6aa1c;
+  color: #000;
+}
+
+.service-icon {
+  font-size: 28px;
+  margin-bottom: 15px;
+}
+
+.service-card h3 {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.service-card p {
+  font-size: 13px;
+  color: #ccc;
+}
+
+.service-card.highlighted p {
+  color: #000;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+}
