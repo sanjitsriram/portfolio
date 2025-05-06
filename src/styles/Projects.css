@@ -1,23 +1,113 @@
+.portfolio-container {
+  display: flex;
+  background-color: #1f222c;
+  padding: 80px 100px;
+  min-height: 100vh;
+  font-family: 'Poppins', sans-serif;
+  box-sizing: border-box;
+  color: #ffffff;
+}
 
-/* Projects.css */
-.projects {
-    background-color: #fff;
-  }
-  
-  .project-list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-  }
-  
-  .project {
-    width: 45%;
-    padding: 20px;
-    margin-bottom: 20px;
-    background-color: #f4f4f4;
-  }
-  
-  .project h3 {
-    font-size: 1.5rem;
-  }
-  
+.portfolio-left {
+  flex: 1;
+  max-width: 400px;
+}
+
+.portfolio-subtitle {
+  color: #cfcfcf;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.portfolio-title {
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 1.4;
+  margin-bottom: 24px;
+}
+
+.portfolio-desc {
+  color: #bcbcbc;
+  font-size: 15px;
+  margin-bottom: 30px;
+}
+
+.portfolio-link {
+  color: #ffc25c;
+  font-weight: 500;
+  font-size: 16px;
+  text-decoration: none;
+}
+
+.portfolio-link span {
+  margin-left: 6px;
+}
+
+.portfolio-right {
+  flex: 2;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  margin-left: 80px;
+}
+
+.image-wrapper {
+  position: absolute;
+  width: 330px;
+  height: 250px;
+  background-color: #2a2c38;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+}
+
+.image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.img-label {
+  position: absolute;
+  bottom: 12px;
+  left: 12px;
+  color: #fff;
+  background: rgba(15, 15, 15, 0.6);
+  padding: 8px 12px;
+  border-radius: 4px;
+}
+
+.img-title {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.img-sub {
+  font-size: 13px;
+  color: #cfcfcf;
+  margin: 0;
+}
+
+/* Custom positions as per image layout */
+.top-right {
+  top: 0;
+  right: 0;
+  transform: rotate(-2deg);
+}
+
+.middle-left {
+  top: 220px;
+  left: 30px;
+  transform: rotate(1deg);
+}
+
+.bottom-right {
+  top: 440px;
+  right: 20px;
+  transform: rotate(-1.5deg);
+}

@@ -1,12 +1,129 @@
+.bt-wrapper {
+  background-color: #1A1D25;
+  color: #fff;
+  font-family: 'Inter', sans-serif;
+  padding: 100px 60px;
+}
 
-/* About.css */
-.about {
-    background-color: #fff;
-    text-align: center;
-  }
-  
-  .about-content {
-    max-width: 800px;
-    margin: 0 auto;
-  }
-  
+.bt-blog-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 120px;
+  flex-wrap: wrap;
+}
+
+.bt-blog-left {
+  max-width: 40%;
+}
+
+.bt-blog-label {
+  font-size: 14px;
+  color: #999;
+  margin-bottom: 10px;
+  letter-spacing: 0.8px;
+}
+
+.bt-blog-heading {
+  font-size: 36px;
+  font-weight: 600;
+  line-height: 1.4;
+  color: #ffffff;
+}
+
+.bt-blog-right {
+  max-width: 55%;
+  width: 100%;
+}
+
+.bt-blog-entry {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 22px 0;
+  border-bottom: 1px solid #333;
+}
+
+.bt-blog-date {
+  font-size: 14px;
+  color: #888;
+  margin-bottom: 6px;
+}
+
+.bt-blog-title {
+  font-size: 16px;
+  color: #fff;
+  font-weight: 500;
+}
+
+.bt-arrow {
+  color: #facc15;
+  font-size: 18px;
+}
+
+.bt-testimonial-section {
+  display: flex;
+  align-items: flex-start;
+  gap: 60px;
+  flex-wrap: wrap;
+}
+
+.bt-image-wrapper {
+  flex-shrink: 0;
+}
+
+.bt-testimonial-img {
+  width: 240px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 4px;
+  filter: grayscale(100%);
+}
+
+.bt-testimonial-text {
+  max-width: 600px;
+  position: relative;
+}
+
+.bt-quote-symbol {
+  font-size: 60px;
+  color: #444;
+  position: absolute;
+  top: -50px;
+  left: -30px;
+}
+
+.bt-testimonial-content {
+  font-size: 18px;
+  line-height: 1.7;
+  margin-bottom: 20px;
+  color: #ddd;
+}
+
+.bt-testimonial-author {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.bt-testimonial-position {
+  font-size: 14px;
+  color: #aaa;
+  margin-bottom: 24px;
+}
+
+.bt-pagination-dots {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.bt-dot {
+  width: 12px;
+  height: 12px;
+  background-color: #444;
+  border-radius: 50%;
+}
+
+.bt-dot-active {
+  background-color: #facc15;
+}

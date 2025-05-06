@@ -1,17 +1,132 @@
+/* ContactForm.css */
 
-/* Skills.css */
-.skills {
-    background-color: #eaeaea;
-    padding: 40px;
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', sans-serif;
+  background-color: #1e2430;
+  color: #ffffff;
+}
+
+.contact-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 60px 30px;
+}
+
+.left-section, .right-section {
+  width: 100%;
+  max-width: 1140px;
+  display: inline-block;
+  vertical-align: top;
+  margin-bottom: 60px;
+}
+
+@media (min-width: 768px) {
+  .contact-page {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
   }
-  
-  .skills ul {
-    list-style: none;
-    padding: 0;
+
+  .left-section, .right-section {
+    width: 45%;
+    margin-bottom: 0;
   }
-  
-  .skills ul li {
-    font-size: 1.2rem;
-    padding: 5px 0;
-  }
-  
+}
+
+h2 {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 15px;
+  line-height: 1.4;
+}
+
+p {
+  color: #a0a0a0;
+  font-size: 14px;
+  margin-bottom: 30px;
+}
+
+.email-link {
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 600;
+  color: #ffb84d;
+  display: inline-flex;
+  align-items: center;
+}
+
+.email-link span.arrow {
+  margin-left: 10px;
+  font-size: 18px;
+}
+
+.right-section h2 {
+  margin-bottom: 30px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid #444;
+  color: white;
+  font-size: 16px;
+  padding: 12px 0;
+  margin-bottom: 30px;
+  outline: none;
+}
+
+.text-area-container {
+  position: relative;
+}
+
+.text-area-container textarea {
+  height: 80px;
+  resize: none;
+}
+
+.send-button {
+  position: absolute;
+  right: 0;
+  bottom: 10px;
+  background: none;
+  border: none;
+  color: #ffb84d;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+.footer {
+  text-align: center;
+  margin-top: 60px;
+}
+
+.logo {
+  font-size: 48px;
+  margin-bottom: 10px;
+}
+
+.footer p {
+  color: #a0a0a0;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.footer strong {
+  color: white;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.icon {
+  font-size: 20px;
+  cursor: pointer;
+}
