@@ -46,11 +46,10 @@ const BlogTestimonial = () => {
         <div className="bt-testimonial-text">
           <span className="bt-quote-symbol">“</span>
           <p className="bt-testimonial-content">
-            Amazing! At vero eos et accu samus et iusto odio dignissimosan ducimus qui blanditiis
-            praesentium volup capaten nise no kamani kuc kuc hotahe!
+          Don’t give someone hope by promising help you can’t give. It’s better to be honest about what you can do, rather than raise expectations you might not be able to meet.
           </p>
-          <p className="bt-testimonial-author">Jared Warner</p>
-          <p className="bt-testimonial-position">CEO of BeServer</p>
+          <p className="bt-testimonial-author">Sanjit sriram</p>
+          <p className="bt-testimonial-position">CEO of Taskiit</p>
           <div className="bt-pagination-dots">
             <span className="bt-dot bt-dot-active"></span>
             <span className="bt-dot"></span>
