@@ -1,55 +1,49 @@
-/* ContactForm.css */
-
 body, html {
   margin: 0;
   padding: 0;
   font-family: 'Inter', sans-serif;
-  background-color: #1e2430;
-  color: #ffffff;
+  background-color:  #313443;
+  color: white;
 }
 
-.contact-page {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.cf-container {
   padding: 60px 30px;
 }
 
-.left-section, .right-section {
-  width: 100%;
+.cf-content-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
   max-width: 1140px;
-  display: inline-block;
-  vertical-align: top;
-  margin-bottom: 60px;
+  margin: auto;
 }
 
 @media (min-width: 768px) {
-  .contact-page {
+  .cf-content-wrapper {
     flex-direction: row;
     justify-content: space-between;
-    align-items: flex-start;
-  }
-
-  .left-section, .right-section {
-    width: 45%;
-    margin-bottom: 0;
   }
 }
 
-h2 {
+.cf-left, .cf-right {
+  flex: 1;
+}
+
+.cf-left h2,
+.cf-right h2 {
   font-size: 28px;
   font-weight: 700;
-  margin-bottom: 15px;
   line-height: 1.4;
+  margin-bottom: 15px;
 }
 
-p {
+.cf-left p {
   color: #a0a0a0;
   font-size: 14px;
   margin-bottom: 30px;
 }
 
-.email-link {
+.cf-email-link {
   text-decoration: none;
   font-size: 16px;
   font-weight: 600;
@@ -58,19 +52,19 @@ p {
   align-items: center;
 }
 
-.email-link span.arrow {
+.cf-arrow {
   margin-left: 10px;
   font-size: 18px;
 }
 
-.right-section h2 {
-  margin-bottom: 30px;
+.cf-form {
+  display: flex;
+  flex-direction: column;
 }
 
-.contact-form input,
-.contact-form textarea {
-  width: 100%;
-  background-color: transparent;
+.cf-form input,
+.cf-form textarea {
+  background: transparent;
   border: none;
   border-bottom: 1px solid #444;
   color: white;
@@ -78,55 +72,56 @@ p {
   padding: 12px 0;
   margin-bottom: 30px;
   outline: none;
+  width: 100%;
 }
 
-.text-area-container {
+.cf-textarea-wrapper {
   position: relative;
 }
 
-.text-area-container textarea {
+.cf-form textarea {
   height: 80px;
   resize: none;
 }
 
-.send-button {
+.cf-send-btn {
   position: absolute;
   right: 0;
   bottom: 10px;
   background: none;
   border: none;
-  color: #ffb84d;
   font-size: 22px;
+  color: #ffb84d;
   cursor: pointer;
 }
 
-.footer {
+.cf-footer {
   text-align: center;
   margin-top: 60px;
 }
 
-.logo {
+.cf-logo {
   font-size: 48px;
   margin-bottom: 10px;
 }
 
-.footer p {
-  color: #a0a0a0;
+.cf-footer p {
   font-size: 14px;
+  color: #a0a0a0;
   margin-bottom: 20px;
 }
 
-.footer strong {
+.cf-footer strong {
   color: white;
 }
 
-.social-icons {
+.cf-icons {
   display: flex;
   justify-content: center;
   gap: 20px;
 }
 
-.icon {
+.cf-icon {
   font-size: 20px;
   cursor: pointer;
 }
