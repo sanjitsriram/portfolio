@@ -4,7 +4,7 @@
   --primary-bg: #313443;
   --secondary-bg: #242834;
   --text-light: #fff;
-  --text-gray: #b0b0b0;
+  --text-white: #FFFFFF; /* Added white variable */
   --highlight-yellow: #FDBB2F;
 }
 
@@ -19,54 +19,60 @@ body {
   color: var(--text-light);
 }
 
-/* Top Section */
+/* Top Layout */
 .hero-top {
   display: flex;
   position: relative;
   background-color: var(--primary-bg);
-  padding: 60px 80px 40px 80px;
+  padding: 60px 60px 40px 80px;
 }
 
 .hero-left {
   flex: 1;
   position: relative;
   padding-top: 20px;
-  padding-right: 80px;
+  padding-right: 60px;
 }
 
-.hero-logo {
-  font-size: 40px;
-  font-weight: 700;
-  color: var(--highlight-yellow);
-  margin-bottom: 40px;
+.hero-logo img {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid var(--highlight-yellow);
 }
 
 .hero-name {
   font-size: 64px;
   font-weight: 700;
   line-height: 1.2;
-  margin: 0;
+  margin: 30px 0 10px 0;
   position: relative;
   z-index: 2;
 }
 
 .dot {
-  color: var(--text-light);
+  color: var(--highlight-yellow);
 }
 
 .yellow-line {
-  width: 50px;
+  width: 60px;
   height: 4px;
   background: var(--highlight-yellow);
-  margin: 20px 0;
+  margin: 24px 0;
 }
 
 .social-icons {
   display: flex;
-  gap: 16px;
-  font-size: 20px;
+  gap: 20px;
+  font-size: 22px;
   z-index: 2;
   position: relative;
+}
+
+.social-icons .icon-wrapper {
+  cursor: pointer;
+  transition: transform 0.3s ease;
 }
 
 .hero-image {
@@ -80,21 +86,30 @@ body {
 
 .hero-right {
   flex: 1;
-  padding-left: 60px;
+  padding-left: 130px;
 }
 
 .nav-menu {
   display: flex;
-  gap: 40px;
+  gap: 36px;
   font-size: 18px;
-  color: #888;
+  color: var(--text-white); /* Changed from grey to white */
   margin-bottom: 40px;
+}
+
+.nav-menu span {
+  cursor: pointer;
+  position: relative;
+  transition: color 0.2s;
+}
+
+.nav-menu span:hover {
+  color: var(--text-light);
 }
 
 .nav-menu .active {
   color: var(--text-light);
   font-weight: 500;
-  position: relative;
 }
 
 .nav-menu .active::after {
@@ -111,10 +126,12 @@ body {
 
 .intro-heading {
   font-size: 14px;
-  color: var(--text-gray);
+  color: var(--text-white); /* Changed from gray to white */
   letter-spacing: 1.2px;
   text-transform: uppercase;
   margin-bottom: 10px;
+  font-weight: 500;
+  line-height: 1.2;
 }
 
 .intro-title {
@@ -126,7 +143,7 @@ body {
 .intro-desc {
   font-size: 15px;
   line-height: 1.6;
-  color: var(--text-gray);
+  color: var(--text-white); /* Changed from gray to white */
   margin-bottom: 20px;
 }
 
@@ -135,33 +152,9 @@ body {
   font-weight: 500;
   font-size: 16px;
   text-decoration: none;
+  transition: text-decoration 0.2s ease;
 }
 
-/* Bottom Section */
-.hero-bottom {
-  display: flex;
-  justify-content: space-between;
-  background-color: var(--secondary-bg);
-  padding: 40px 80px;
-  margin-top: 0;
-}
-
-.contact-title {
-  font-size: 13px;
-  color: var(--text-gray);
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  margin-bottom: 10px;
-}
-
-.contact-desc {
-  font-size: 18px;
-  font-weight: 500;
-}
-
-.quote-block {
-  font-size: 18px;
-  line-height: 1.6;
-  text-align: right;
-  max-width: 400px;
+.my-story:hover {
+  text-decoration: underline;
 }
