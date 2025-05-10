@@ -6,6 +6,8 @@ import { FaInstagram, FaLinkedinIn, FaDribbble } from 'react-icons/fa';
 import { motion } from 'framer-motion';
 
 const Hero = () => {
+  const socialIcons = [FaDribbble, FaInstagram, FaLinkedinIn];
+
   return (
     <section className="hero">
       <div className="hero-top">
@@ -42,10 +44,15 @@ const Hero = () => {
             initial="hidden"
             animate="visible"
             variants={{
-              visible: { transition: { staggerChildren: 0.3 } },
+              hidden: {},
+              visible: {
+                transition: {
+                  staggerChildren: 0.3,
+                },
+              },
             }}
           >
-            {[FaDribbble, FaInstagram, FaLinkedinIn].map((Icon, i) => (
+            {socialIcons.map((Icon, i) => (
               <motion.div
                 key={i}
                 className="icon-wrapper"
@@ -62,13 +69,18 @@ const Hero = () => {
           </motion.div>
 
           <motion.img
-            src={Profileimg}
-            alt="Sanjit Sri ram"
-            className="hero-image"
-            initial={{ opacity: 0, y: 80 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 1, duration: 0.8 }}
-          />
+  src={Profileimg}
+  alt="Sanjit Sri ram"
+  className="hero-image"
+  initial={{ opacity: 0, x: 150, scale: 0.9 }}
+  animate={{ opacity: 1, x: 0, scale: 1 }}
+  transition={{
+    delay: 1,
+    duration: 1.2,
+    ease: [0.25, 1, 0.5, 1] // smooth, spring-like
+  }}
+/>
+
         </div>
 
         {/* Right Side */}

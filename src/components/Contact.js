@@ -1,62 +1,109 @@
 import React from "react";
 import "../styles/Contact.css";
-import { FaArrowRight } from "react-icons/fa";
-import { FaCube, FaPaintBrush, FaDesktop } from "react-icons/fa";
+import { FaArrowRight, FaCube, FaPaintBrush, FaDesktop } from "react-icons/fa";
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+
+const fadeSlideUp = {
+  hidden: { opacity: 0, y: 60 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.8, ease: "easeOut" },
+  },
+};
+
+const staggerCards = {
+  visible: {
+    transition: {
+      staggerChildren: 0.2,
+    },
+  },
+  hidden: {},
+};
+
+const cardAnimation = {
+  hidden: { opacity: 0, y: 40 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.6 },
+  },
+};
 
 const Contact = () => {
+  const [ref1, inView1] = useInView({ threshold: 0.1, triggerOnce: false });
+  const [ref2, inView2] = useInView({ threshold: 0.1, triggerOnce: false });
+
   return (
     <section className="contact-section">
-      <div className="contact-container">
+      {/* First block */}
+      <motion.div
+        ref={ref1}
+        className="contact-container"
+        initial="hidden"
+        animate={inView1 ? "visible" : "hidden"}
+        variants={fadeSlideUp}
+      >
         <div className="contact-left">
           <p className="section-label">— Contact</p>
-          <h2 className="contact-heading">
-            Any Type Of Query & Discussion.
-          </h2>
+          <h2 className="contact-heading">Any Type Of Query & Discussion.</h2>
           <p className="contact-description">
-            Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium.
+            Sometimes mistakes happen, but they lead to better understanding.
           </p>
-          <a href="mailto:hi@carlos.com" className="contact-email">
-            hi@carlos.com <FaArrowRight className="arrow-icon" />
+          <a href="mailto:sanjitsriram78@gmail.com" className="contact-email">
+            sanjitsriram78@gmail.com <FaArrowRight className="arrow-icon" />
           </a>
         </div>
 
-        <div className="contact-right">
+        <motion.div className="contact-right" variants={fadeSlideUp}>
           <p className="quote">
             You can’t use up creativity, the more you use, more you have in your significant mind.
           </p>
           <p className="quote-sub">
-            Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa.
+            Great things often begin with small mistakes — they teach us, shape us, and help us grow.
           </p>
           <div className="stats">
-            <div className="stat-box">
-              <h1>14</h1>
+            <motion.div className="stat-box" variants={fadeSlideUp}>
+              <h1>1</h1>
               <span>Years of Experience.</span>
-            </div>
-            <div className="stat-box">
-              <h1>187</h1>
+            </motion.div>
+            <motion.div className="stat-box" variants={fadeSlideUp}>
+              <h1>10</h1>
               <span>Satisfied Clients.</span>
-            </div>
+            </motion.div>
           </div>
-        </div>
-      </div>
+        </motion.div>
+      </motion.div>
 
-      <div className="services-grid">
-        <div className="service-card highlighted">
-          <FaCube className="service-icon" />
-          <h3>Product Designer.</h3>
-          <p>124 Projects</p>
-        </div>
-        <div className="service-card">
-          <FaPaintBrush className="service-icon" />
-          <h3>Branding Designer.</h3>
-          <p>37 Projects</p>
-        </div>
-        <div className="service-card">
-          <FaDesktop className="service-icon" />
-          <h3>Full Stack Developer.</h3>
-          <p>62 Projects</p>
-        </div>
-      </div>
+      {/* Services block */}
+      <motion.div
+        ref={ref2}
+        className="services-grid"
+        initial="hidden"
+        animate={inView2 ? "visible" : "hidden"}
+        variants={staggerCards}
+      >
+        {[
+          { icon: <FaCube />, title: "Built Applications.", projects: "5 Projects", highlighted: true },
+          { icon: <FaPaintBrush />, title: "Branding Designer.", projects: "2 Projects" },
+          { icon: <FaDesktop />, title: "Full Stack Developer.", projects: "6 Projects" },
+        ].map((card, idx) => (
+          <motion.div
+            key={idx}
+            className={`service-card ${card.highlighted ? "highlighted" : ""}`}
+            variants={cardAnimation}
+          >
+            <div className="top-half">
+              {card.icon}
+              <h3>{card.title}</h3>
+            </div>
+            <div className="bottom-half">
+              <p>{card.projects}</p>
+            </div>
+          </motion.div>
+        ))}
+      </motion.div>
     </section>
   );
 };

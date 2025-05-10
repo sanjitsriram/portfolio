@@ -4,7 +4,7 @@
   --primary-bg: #313443;
   --secondary-bg: #242834;
   --text-light: #fff;
-  --text-white: #FFFFFF; /* Added white variable */
+  --text-white: #FFFFFF;
   --highlight-yellow: #FDBB2F;
 }
 
@@ -25,6 +25,7 @@ body {
   position: relative;
   background-color: var(--primary-bg);
   padding: 60px 60px 40px 80px;
+  justify-content: space-between; /* For better layout */
 }
 
 .hero-left {
@@ -40,6 +41,7 @@ body {
   border-radius: 50%;
   object-fit: cover;
   border: 3px solid var(--highlight-yellow);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
 }
 
 .hero-name {
@@ -72,7 +74,12 @@ body {
 
 .social-icons .icon-wrapper {
   cursor: pointer;
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, color 0.3s ease; /* Adding transition on color */
+}
+
+.social-icons .icon-wrapper:hover {
+  transform: scale(1.2); /* Slight scaling effect */
+  color: var(--highlight-yellow); /* Change color on hover */
 }
 
 .hero-image {
@@ -93,22 +100,23 @@ body {
   display: flex;
   gap: 36px;
   font-size: 18px;
-  color: var(--text-white); /* Changed from grey to white */
+  color: var(--text-white);
   margin-bottom: 40px;
 }
 
 .nav-menu span {
   cursor: pointer;
   position: relative;
-  transition: color 0.2s;
+  transition: color 0.2s ease, text-shadow 0.3s ease;
 }
 
 .nav-menu span:hover {
-  color: var(--text-light);
+  color: var(--highlight-yellow);
+  text-shadow: 0 0 10px var(--highlight-yellow); /* Soft glow effect on hover */
 }
 
 .nav-menu .active {
-  color: var(--text-light);
+  color: var(--highlight-yellow);
   font-weight: 500;
 }
 
@@ -126,7 +134,7 @@ body {
 
 .intro-heading {
   font-size: 14px;
-  color: var(--text-white); /* Changed from gray to white */
+  color: var(--text-white);
   letter-spacing: 1.2px;
   text-transform: uppercase;
   margin-bottom: 10px;
@@ -138,12 +146,13 @@ body {
   font-size: 26px;
   font-weight: 600;
   margin-bottom: 16px;
+  line-height: 1.4; /* For better readability */
 }
 
 .intro-desc {
   font-size: 15px;
   line-height: 1.6;
-  color: var(--text-white); /* Changed from gray to white */
+  color: var(--text-white);
   margin-bottom: 20px;
 }
 
@@ -157,4 +166,35 @@ body {
 
 .my-story:hover {
   text-decoration: underline;
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+  .hero-top {
+    flex-direction: column;
+    padding: 40px;
+  }
+
+  .hero-left {
+    padding-right: 0;
+    text-align: center;
+  }
+
+  .hero-right {
+    padding-left: 0;
+    text-align: center;
+    margin-top: 30px;
+  }
+
+  .hero-image {
+    left: 0;
+    bottom: 20px;
+    height: 300px; /* Adjust height for smaller screens */
+  }
+
+  .nav-menu {
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+  }
 }
