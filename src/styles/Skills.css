@@ -2,126 +2,286 @@ body, html {
   margin: 0;
   padding: 0;
   font-family: 'Inter', sans-serif;
-  background-color:  #313443;
+  background-color: #313443;
   color: white;
 }
 
 .cf-container {
-  padding: 60px 30px;
+  padding: 40px 30px;
+  color: #ffffff;
 }
 
-.cf-content-wrapper {
+.cf-container .cf-content-wrapper {
   display: flex;
   flex-direction: column;
-  gap: 60px;
+  gap: 40px;
   max-width: 1140px;
   margin: auto;
 }
 
 @media (min-width: 768px) {
-  .cf-content-wrapper {
+  .cf-container .cf-content-wrapper {
     flex-direction: row;
     justify-content: space-between;
   }
 }
 
-.cf-left, .cf-right {
+.cf-container .cf-left,
+.cf-container .cf-right {
   flex: 1;
 }
 
-.cf-left h2,
-.cf-right h2 {
+.cf-container .cf-left h2,
+.cf-container .cf-right h2 {
   font-size: 28px;
-  font-weight: 700;
+  font-weight: 800;
   line-height: 1.4;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
+  color: #ffffff;
 }
 
-.cf-left p {
-  color: #a0a0a0;
+.cf-container .cf-left p {
+  color: #dddddd;
   font-size: 14px;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 
-.cf-email-link {
+.cf-container .cf-email-link {
   text-decoration: none;
   font-size: 16px;
-  font-weight: 600;
+  font-weight: 700;
   color: #ffb84d;
   display: inline-flex;
   align-items: center;
 }
 
-.cf-arrow {
+.cf-container .cf-arrow {
   margin-left: 10px;
   font-size: 18px;
 }
 
-.cf-form {
+.cf-container .cf-form {
   display: flex;
   flex-direction: column;
 }
 
-.cf-form input,
-.cf-form textarea {
+.cf-container .cf-form input,
+.cf-container .cf-form textarea {
   background: transparent;
   border: none;
-  border-bottom: 1px solid #444;
+  border-bottom: 1px solid #555;
   color: white;
   font-size: 16px;
-  padding: 12px 0;
-  margin-bottom: 30px;
+  padding: 10px 0;
+  margin-bottom: 20px;
   outline: none;
   width: 100%;
 }
 
-.cf-textarea-wrapper {
+.cf-container .cf-textarea-wrapper {
   position: relative;
 }
 
-.cf-form textarea {
-  height: 80px;
+.cf-container .cf-form textarea {
+  height: 60px;
   resize: none;
 }
 
-.cf-send-btn {
+/* Enhanced Submit Button */
+.cf-container .cf-send-btn-text {
   position: absolute;
   right: 0;
-  bottom: 10px;
-  background: none;
+  bottom: -55px; /* Adjusted position */
+  background-color: #ffb84d;
   border: none;
-  font-size: 22px;
-  color: #ffb84d;
+  padding: 12px 20px;
+  color: white;
+  font-weight: 700;
+  font-size: 15px;
+  border-radius: 6px;
   cursor: pointer;
+  transition: all 0.3s ease;
 }
 
-.cf-footer {
+.cf-container .cf-send-btn-text:hover {
+  background-color: #ffc966;
+  transform: scale(1.05);
+}
+
+.cf-container .cf-footer {
   text-align: center;
-  margin-top: 60px;
+  margin-top: 40px;
 }
 
-.cf-logo {
-  font-size: 48px;
-  margin-bottom: 10px;
+.cf-container .cf-logo {
+  margin-bottom: 8px;
+  margin-top: 80px;
 }
 
-.cf-footer p {
+.cf-container .cf-logo img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.cf-container .cf-footer p {
   font-size: 14px;
   color: #a0a0a0;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 }
 
-.cf-footer strong {
+.cf-container .cf-footer strong {
   color: white;
 }
 
-.cf-icons {
+.cf-container .cf-icons {
   display: flex;
   justify-content: center;
   gap: 20px;
 }
 
-.cf-icon {
+.cf-container .cf-icon {
   font-size: 20px;
   cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.cf-container .cf-icon:hover {
+  transform: scale(1.2);
+}
+
+/* Scroll animation */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.scroll-fade-in {
+  animation: fadeInUp 1s ease forwards;
+  opacity: 0;
+}
+
+
+/* Tablets and Medium Screens (768px - 1024px) */
+@media (max-width: 1024px) {
+  .cf-container {
+    padding: 30px 20px;
+  }
+
+  .cf-container .cf-content-wrapper {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .cf-container .cf-left h2,
+  .cf-container .cf-right h2 {
+    font-size: 24px;
+  }
+
+  .cf-container .cf-left p {
+    font-size: 13px;
+  }
+
+  .cf-container .cf-form input,
+  .cf-container .cf-form textarea {
+    font-size: 15px;
+  }
+
+  .cf-container .cf-send-btn-text {
+    bottom: -50px;
+    padding: 12px 20px;
+    font-size: 14px;
+  }
+
+  .cf-container .cf-logo img {
+    width: 50px;
+    height: 50px;
+  }
+
+  .cf-container .cf-icon {
+    font-size: 18px;
+  }
+}
+
+/* Mobile Screens (480px - 767px) */
+@media (max-width: 767px) {
+  .cf-container {
+    padding: 20px 15px;
+  }
+
+  .cf-container .cf-left h2,
+  .cf-container .cf-right h2 {
+    font-size: 22px;
+    line-height: 1.3;
+  }
+
+  .cf-container .cf-left p {
+    font-size: 12px;
+  }
+
+  .cf-container .cf-form input,
+  .cf-container .cf-form textarea {
+    font-size: 14px;
+  }
+
+  .cf-container .cf-send-btn-text {
+    bottom: -45px;
+    padding: 10px 16px;
+    font-size: 13px;
+  }
+
+  .cf-container .cf-footer p {
+    font-size: 12px;
+  }
+
+  .cf-container .cf-icon {
+    font-size: 16px;
+  }
+}
+
+/* Extra Small Screens (below 480px) */
+@media (max-width: 479px) {
+  .cf-container {
+    padding: 20px 10px;
+  }
+
+  .cf-container .cf-left h2,
+  .cf-container .cf-right h2 {
+    font-size: 20px;
+  }
+
+  .cf-container .cf-left p {
+    font-size: 11px;
+  }
+
+  .cf-container .cf-form input,
+  .cf-container .cf-form textarea {
+    font-size: 13px;
+  }
+
+  .cf-container .cf-send-btn-text {
+    bottom: -40px;
+    padding: 8px 14px;
+    font-size: 12px;
+  }
+
+  .cf-container .cf-logo img {
+    width: 45px;
+    height: 45px;
+  }
+
+  .cf-container .cf-icon {
+    font-size: 14px;
+  }
+
+  .cf-container .cf-footer p {
+    font-size: 11px;
+  }
 }

@@ -198,3 +198,207 @@ body {
     text-align: center;
   }
 }
+
+
+@media (max-width: 1024px) {
+  /* For tablets or smaller desktops */
+  .hero-top {
+    padding: 50px;
+  }
+
+  .hero-left {
+    padding-right: 30px;
+  }
+
+  .hero-logo img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .hero-name {
+    font-size: 50px;
+  }
+
+  .dot {
+    font-size: 60px;
+  }
+
+  .yellow-line {
+    width: 50px;
+    height: 3px;
+  }
+
+  .social-icons {
+    font-size: 20px;
+  }
+
+  .hero-image {
+    height: 380px;
+  }
+
+  .nav-menu {
+    gap: 24px;
+  }
+
+  .nav-menu span {
+    font-size: 16px;
+  }
+
+  .intro-heading {
+    font-size: 13px;
+  }
+
+  .intro-title {
+    font-size: 22px;
+  }
+
+  .intro-desc {
+    font-size: 14px;
+  }
+
+  .my-story {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 768px) {
+  /* For small screens such as mobile devices */
+  .hero-top {
+    flex-direction: column;
+    padding: 40px;
+  }
+
+  .hero-left {
+    padding-right: 0;
+    text-align: center;
+  }
+
+  .hero-logo img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .hero-name {
+    font-size: 40px;
+  }
+
+  .dot {
+    font-size: 40px;
+  }
+
+  .yellow-line {
+    width: 40px;
+    height: 3px;
+  }
+
+  .social-icons {
+    font-size: 18px;
+    gap: 15px;
+  }
+
+  .hero-image {
+    left: 0;
+    bottom: 20px;
+    height: 300px; /* Adjust height for smaller screens */
+  }
+
+  .hero-right {
+    padding-left: 0;
+    text-align: center;
+    margin-top: 30px;
+  }
+
+  .nav-menu {
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+  }
+
+  .nav-menu span {
+    font-size: 16px;
+  }
+
+  .intro-heading {
+    font-size: 12px;
+  }
+
+  .intro-title {
+    font-size: 20px;
+  }
+
+  .intro-desc {
+    font-size: 13px;
+  }
+
+  .my-story {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  /* For very small screens like mobile phones */
+  .hero-top {
+    padding: 30px;
+  }
+
+  .hero-left {
+    padding-right: 0;
+    text-align: center;
+  }
+
+  .hero-name {
+    font-size: 32px;
+  }
+
+  .dot {
+    font-size: 30px;
+  }
+
+  .yellow-line {
+    width: 30px;
+    height: 2px;
+  }
+
+  .social-icons {
+    font-size: 16px;
+    gap: 12px;
+  }
+
+  .hero-image {
+    left: 0;
+    bottom: 10px;
+    height: 250px; /* Adjust height for very small screens */
+  }
+
+  .hero-right {
+    padding-left: 0;
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  .nav-menu {
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+  }
+
+  .nav-menu span {
+    font-size: 14px;
+  }
+
+  .intro-heading {
+    font-size: 11px;
+  }
+
+  .intro-title {
+    font-size: 18px;
+  }
+
+  .intro-desc {
+    font-size: 12px;
+  }
+
+  .my-story {
+    font-size: 13px;
+  }
+}
